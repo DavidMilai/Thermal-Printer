@@ -20,8 +20,9 @@ class _PosPrinterScreenState extends State<PosPrinterScreen> {
     printer = NetworkPrinter(paper, profile);
 
     res = await printer.connect('192.168.0.123', port: 9100);
-
+    print("Testing 1");
     if (res == PosPrintResult.success) {
+      print("Testing 2");
       testReceipt(printer);
       printer.disconnect();
     }
@@ -59,7 +60,9 @@ class _PosPrinterScreenState extends State<PosPrinterScreen> {
   @override
   void initState() {
     super.initState();
+    print("Testing 001");
     setup();
+    print("Testing 002");
   }
 
   @override
